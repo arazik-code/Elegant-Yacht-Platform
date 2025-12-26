@@ -1,0 +1,712 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "seeAll": "See all",
+    "learnMore": "Learn more",
+    "getStarted": "Get started",
+    "contactUs": "Contact us",
+    "readMore": "Read more",
+    "viewDetails": "View details",
+    "required": "Required",
+    "optional": "Optional"
+  },
+  "nav": {
+    "home": "Home",
+    "yachts": "Yachts",
+    "charter": "Charter",
+    "sellYacht": "Sell Your Yacht",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "favorites": "Favorites",
+    "compare": "Compare",
+    "menu": "Menu",
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "hero": {
+    "badge": "Dubai's Premier Yacht Brokerage",
+    "title": "Luxury Yachts",
+    "titleHighlight": "For Sale & Charter in Dubai",
+    "subtitle": "Experience the extraordinary. Browse our exclusive collection of superyachts and luxury motor yachts available for purchase or charter.",
+    "cta": "View Our Yachts",
+    "ctaSecondary": "Contact an Expert",
+    "whatsapp": "WhatsApp Inquiry",
+    "explore": "Explore",
+    "aiSearchLabel": "AI-Powered Search"
+  },
+  "featured": {
+    "badge": "Featured Collection",
+    "title": "Exceptional Yachts",
+    "viewAll": "View All Yachts"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "How Can We Assist You?",
+    "subtitle": "Whether you're buying, chartering, or selling, our team provides white-glove service for every yacht transaction.",
+    "sales": {
+      "title": "Yacht Sales",
+      "description": "Browse our curated collection of luxury yachts for sale. From motor yachts to superyachts, find your perfect vessel."
+    },
+    "charter": {
+      "title": "Yacht Charter",
+      "description": "Experience Dubai from the water. Charter a luxury yacht for celebrations, corporate events, or sunset cruises."
+    },
+    "sell": {
+      "title": "Sell Your Yacht",
+      "description": "List your yacht with us and reach our audience of 900K+ Instagram followers and qualified buyers worldwide."
+    },
+    "learnMore": "Learn More"
+  },
+  "trust": {
+    "dedLicensed": "DED Licensed",
+    "followers": "Instagram Followers",
+    "yachts": "Yachts Listed",
+    "clients": "Happy Clients",
+    "badges": {
+      "certified": {
+        "title": "Certified Brokers",
+        "description": "Licensed & Verified"
+      },
+      "dubai": {
+        "title": "Dubai Marina Based",
+        "description": "Prime Location"
+      },
+      "followers": {
+        "title": "900K+ Followers",
+        "description": "Social Proof"
+      },
+      "service": {
+        "title": "VIP Service",
+        "description": "White-Glove Treatment"
+      }
+    }
+  },
+  "instagram": {
+    "badge": "Follow Our Journey",
+    "title": "Join Our Community of",
+    "titleSuffix": "Followers",
+    "subtitle": "Get exclusive first looks at new listings, behind-the-scenes content, and the luxury yacht lifestyle. Join the largest yacht community in the UAE.",
+    "follow": "Follow",
+    "stats": {
+      "followers": "Followers",
+      "views": "Monthly Views",
+      "sold": "Yachts Sold"
+    }
+  },
+  "cta": {
+    "badge": "Ready to Begin?",
+    "title": "Start Your Yacht Journey Today",
+    "subtitle": "Whether you're looking to buy, charter, or sell a yacht, our team is ready to provide personalized guidance every step of the way.",
+    "whatsapp": "WhatsApp Inquiry",
+    "browse": "Browse Yachts",
+    "primary": "Browse Yachts",
+    "secondary": "Contact Us"
+  },
+  "yachts": {
+    "badge": "Our Collection",
+    "title": "Luxury Yachts",
+    "subtitle": "Discover our curated selection of the world's finest yachts. From sleek motor yachts to magnificent superyachts, find your perfect vessel.",
+    "featured": "Featured Yachts",
+    "forSale": "For Sale",
+    "forCharter": "For Charter",
+    "all": "All Yachts",
+    "noResults": "No yachts found matching your criteria",
+    "adjustFilters": "Try adjusting your filters or search terms",
+    "priceOnRequest": "Price on Request",
+    "perHour": "per hour",
+    "perDay": "per day",
+    "perWeek": "per week",
+    "from": "From",
+    "inquire": "Inquire Now",
+    "viewYacht": "View Yacht",
+    "specifications": "Specifications",
+    "highlights": "Highlights",
+    "amenities": "Amenities",
+    "charterRoutes": "Charter Routes",
+    "description": "Description",
+    "relatedYachts": "You May Also Like",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "addToCompare": "Add to Compare",
+    "removeFromCompare": "Remove from Compare",
+    "compare": "Compare Yachts",
+    "share": "Share"
+  },
+  "specs": {
+    "length": "Length",
+    "beam": "Beam",
+    "draft": "Draft",
+    "brand": "Brand",
+    "model": "Model",
+    "year": "Year",
+    "builder": "Builder",
+    "cabins": "Cabins",
+    "bathrooms": "Bathrooms",
+    "guests": "Guests",
+    "crew": "Crew",
+    "engines": "Engines",
+    "maxSpeed": "Max Speed",
+    "cruiseSpeed": "Cruise Speed",
+    "fuelCapacity": "Fuel Capacity",
+    "range": "Range",
+    "knots": "knots",
+    "liters": "liters",
+    "nauticalMiles": "nm"
+  },
+  "filters": {
+    "title": "Filters",
+    "type": "Type",
+    "priceRange": "Price Range",
+    "lengthRange": "Length",
+    "brand": "Brand",
+    "year": "Year",
+    "cabins": "Cabins",
+    "guests": "Guests",
+    "clearAll": "Clear all",
+    "apply": "Apply Filters",
+    "reset": "Reset",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "minLength": "Min Length",
+    "maxLength": "Max Length",
+    "anyBrand": "Any Brand",
+    "anyYear": "Any Year",
+    "sale": "For Sale",
+    "charter": "For Charter"
+  },
+  "charter": {
+    "title": "Yacht Charter",
+    "subtitle": "Experience luxury on the water with our premium charter fleet",
+    "bookNow": "Book Now",
+    "hourlyRate": "Hourly Rate",
+    "dailyRate": "Daily Rate",
+    "crewIncluded": "Professional Crew Included",
+    "fuelExtra": "Fuel charged separately",
+    "hero": {
+      "badge": "Premium Experience",
+      "title": "Charter a Luxury Yacht in",
+      "titleHighlight": "Dubai",
+      "subtitle": "Experience the Dubai skyline from the water. Our charter yachts come fully crewed with premium amenities for unforgettable celebrations.",
+      "viewFleet": "View Charter Fleet"
+    },
+    "features": {
+      "hours": {
+        "title": "Minimum 3-4 Hours",
+        "desc": "Flexible booking"
+      },
+      "guests": {
+        "title": "Up to 50 Guests",
+        "desc": "Various capacities"
+      },
+      "routes": {
+        "title": "Custom Routes",
+        "desc": "Dubai Marina & Palm"
+      },
+      "crew": {
+        "title": "Full Crew",
+        "desc": "Professional service"
+      }
+    },
+    "routes": {
+      "badge": "Popular Routes",
+      "title": "Explore Dubai By Water"
+    },
+    "fleet": {
+      "badge": "Our Fleet",
+      "title": "Charter Yachts",
+      "empty": "Charter yachts coming soon..."
+    },
+    "cta": {
+      "title": "Ready to Book Your Charter?",
+      "subtitle": "Contact us today and let us create an unforgettable experience on the water.",
+      "whatsapp": "WhatsApp Us"
+    }
+  },
+  "sell": {
+    "title": "Sell Your Yacht",
+    "subtitle": "List your yacht with Dubai's most trusted brokerage",
+    "hero": {
+      "badge": "Premium Listing Service",
+      "title": "Sell Your Yacht With",
+      "titleHighlight": "Bimo Yacht",
+      "subtitle": "List your yacht with Dubai's most-followed yacht brokerage. Get maximum exposure to qualified UHNW buyers through our 900K+ Instagram audience.",
+      "freeValuation": "Free Valuation",
+      "professionalPhotos": "Professional Photos",
+      "noUpfrontFees": "No Upfront Fees"
+    },
+    "benefits": {
+      "badge": "Why List With Us",
+      "title": "The Bimo Yacht Advantage",
+      "reach": {
+        "title": "900K+ Instagram Followers",
+        "desc": "Maximum exposure to qualified buyers across our massive social media audience."
+      },
+      "licensed": {
+        "title": "DED Licensed Brokerage",
+        "desc": "Full legal compliance with Dubai Economic Department regulations."
+      },
+      "premium": {
+        "title": "Premium Positioning",
+        "desc": "Professional photography, video tours, and luxury marketing."
+      },
+      "photo": {
+        "title": "Free Professional Shoot",
+        "desc": "Complimentary photo and video production for your listing."
+      },
+      "fast": {
+        "title": "Fast Sales Process",
+        "desc": "Our network of UHNW clients means faster qualified inquiries."
+      },
+      "support": {
+        "title": "Dedicated Support",
+        "desc": "Personal account manager throughout the entire process."
+      }
+    },
+    "form": {
+      "title": "List Your Yacht",
+      "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+      "name": "Your Name *",
+      "namePlaceholder": "Full name",
+      "phone": "Phone Number *",
+      "phonePlaceholder": "+971 50 123 4567",
+      "email": "Email Address *",
+      "emailPlaceholder": "your@email.com",
+      "yachtDetails": "Yacht Details",
+      "brand": "Brand *",
+      "brandSelect": "Select Brand",
+      "model": "Model *",
+      "modelPlaceholder": "e.g., 80 Flybridge",
+      "year": "Year *",
+      "yearSelect": "Select Year",
+      "length": "Length (ft) *",
+      "lengthSelect": "Select Length (ft)",
+      "condition": "Condition *",
+      "conditionExcellent": "Excellent",
+      "conditionGood": "Good",
+      "conditionFair": "Fair",
+      "location": "Location",
+      "locationPlaceholder": "e.g., Dubai Marina",
+      "askingPrice": "Asking Price (USD)",
+      "askingPricePlaceholder": "e.g., 2500000",
+      "notes": "Additional Details",
+      "notesPlaceholder": "Tell us about your yacht - condition, recent upgrades, equipment, etc.",
+      "other": "Other",
+      "submit": "Submit Listing Request",
+      "submitting": "Submitting...",
+      "terms": "By submitting, you agree to our terms of service and privacy policy.",
+      "success": {
+        "title": "Thank You!",
+        "message": "Your listing request has been sent. Our team will contact you shortly.",
+        "submitAnother": "Submit Another Yacht"
+      }
+    },
+    "info": {
+      "title": "Why 900K+ Followers Matter",
+      "subtitle": "Our Instagram presence isn't just vanity metrics—it's a curated audience of yacht enthusiasts, UHNW individuals, and serious buyers from around the world.",
+      "step1": {
+        "title": "Submit Your Yacht",
+        "desc": "Fill out the form with your yacht details."
+      },
+      "step2": {
+        "title": "Free Valuation",
+        "desc": "We assess your yacht and suggest optimal pricing."
+      },
+      "step3": {
+        "title": "Professional Shoot",
+        "desc": "Complimentary photo and video production."
+      },
+      "step4": {
+        "title": "Maximum Exposure",
+        "desc": "Listed on website + featured on Instagram."
+      },
+      "step5": {
+        "title": "Close the Deal",
+        "desc": "We handle inquiries and facilitate the sale."
+      },
+      "quickContact": "Prefer to speak directly? Contact us on WhatsApp.",
+      "whatsapp": "Chat on WhatsApp"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our yacht experts",
+    "hero": {
+      "titlePrefix": "Get In",
+      "titleHighlight": "Touch",
+      "subtitle": "Have questions about buying, selling, or chartering a yacht? We're here to help. Reach out anytime."
+    },
+    "methods": {
+      "whatsapp": "WhatsApp",
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location",
+      "locationValue": "Dubai Marina, UAE"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll respond within 24 hours.",
+      "name": "Your Name *",
+      "namePlaceholder": "Full name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+971 50 123 4567",
+      "email": "Email Address *",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject *",
+      "subjectSelect": "Select Subject",
+      "subjects": {
+        "buy": "Buying a Yacht",
+        "sell": "Selling My Yacht",
+        "charter": "Charter Inquiry",
+        "partnership": "Business Partnership",
+        "media": "Media / Press",
+        "other": "Other"
+      },
+      "message": "Your Message *",
+      "messagePlaceholder": "Tell us how we can help...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "message": "We'll get back to you as soon as possible.",
+        "sendAnother": "Send Another Message"
+      }
+    },
+    "hours": {
+      "title": "Office Hours",
+      "weekdays": "Monday - Friday",
+      "weekdaysTimes": "9:00 AM - 6:00 PM",
+      "saturday": "Saturday",
+      "saturdayTimes": "10:00 AM - 4:00 PM",
+      "sunday": "Sunday",
+      "sundayTimes": "Closed",
+      "whatsappNote": "WhatsApp available 24/7 for urgent inquiries."
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "cta": {
+      "title": "Prefer a Quick Chat?",
+      "subtitle": "Reach us instantly on WhatsApp—we typically respond within minutes.",
+      "whatsapp": "Chat on WhatsApp"
+    },
+    "info": {
+      "title": "Get In Touch",
+      "address": "Address",
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "hours": "Business Hours",
+      "hoursValue": "9:00 AM - 6:00 PM (Gulf Time)"
+    }
+  },
+  "about": {
+    "title": "About Bimo Yacht",
+    "subtitle": "Dubai's most trusted luxury yacht brokerage",
+    "hero": {
+      "badge": "DED Licensed Brokerage",
+      "titlePrefix": "About",
+      "titleHighlight": "Bimo Yacht",
+      "subtitle": "Dubai's most-followed yacht brokerage, combining social media influence with legitimate business practices."
+    },
+    "founder": {
+      "badge": "Meet the Founder",
+      "name": "Ebrahim",
+      "p1": "What started as a passion project sharing stunning yacht photography has grown into one of Dubai's most recognized yacht media brands.",
+      "p2": "With over 900,000 followers on Instagram, Bimo Yacht has become the go-to destination for yacht enthusiasts, UHNW individuals, and serious buyers looking for their next vessel.",
+      "p3": "Understanding the responsibility that comes with this platform, Ebrahim obtained proper DED licensing to ensure every transaction is legitimate, transparent, and protected.",
+      "quote": "Our social media reach isn't just about followers—it's about connecting the right yachts with the right owners.",
+      "contact": "Contact Ebrahim",
+      "follow": "Follow on Instagram"
+    },
+    "stats": {
+      "followers": "Instagram Followers",
+      "licensed": "Licensed Brokerage",
+      "yachtsSold": "Yachts Sold",
+      "location": "Based in Dubai"
+    },
+    "values": {
+      "badge": "Our Values",
+      "title": "What We Stand For",
+      "trust": {
+        "title": "Trust & Transparency",
+        "desc": "Licensed, legitimate, and fully compliant with UAE regulations. We protect our clients at every step."
+      },
+      "quality": {
+        "title": "Premium Quality",
+        "desc": "We only represent the finest yachts. Every listing meets our strict quality standards."
+      },
+      "client": {
+        "title": "Client First",
+        "desc": "Your satisfaction is our priority. We build lasting relationships, not just transactions."
+      },
+      "team": {
+        "title": "Expert Team",
+        "desc": "Our team combines yacht expertise with digital marketing excellence."
+      }
+    },
+    "journey": {
+      "badge": "Our Journey",
+      "title": "Milestones"
+    },
+    "milestones": {
+      "founded": {
+        "title": "Founded in Dubai",
+        "desc": "Started with a passion for yachts and social media"
+      },
+      "100k": {
+        "title": "100K Followers",
+        "desc": "Reached first major Instagram milestone"
+      },
+      "licensed": {
+        "title": "DED Licensed",
+        "desc": "Official yacht brokerage license in Dubai"
+      },
+      "500k": {
+        "title": "500K Followers",
+        "desc": "Became one of Dubai's top yacht accounts"
+      },
+      "900k": {
+        "title": "900K+ Followers",
+        "desc": "Leading yacht media presence in UAE"
+      }
+    },
+    "license": {
+      "title": "DED Licensed",
+      "description": "Bimo Yacht For Sale is officially registered and licensed by the Dubai Economic Department (DED). This means every transaction is protected by UAE law, giving our clients complete peace of mind.",
+      "number": "License Number: Available upon request"
+    },
+    "cta": {
+      "title": "Ready to Work With Us?",
+      "subtitle": "Whether you're buying, selling, or chartering—we're here to help."
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Founded with a passion for the sea and a commitment to excellence, Bimo Yacht has grown to become Dubai's premier yacht brokerage. We connect discerning buyers with the world's finest yachts."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide an unparalleled yacht buying and charter experience through expert knowledge, personalized service, and access to the finest vessels on the market."
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Dedicated experts at your service"
+    }
+  },
+  "inquiry": {
+    "title": "Inquire About This Yacht",
+    "subtitle": "Our experts will respond within 24 hours",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+971 50 XXX XXXX",
+      "message": "Message",
+      "messagePlaceholder": "I'm interested in this yacht...",
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "success": "Inquiry sent! We'll contact you soon.",
+      "error": "Failed to send. Please try again.",
+      "whatsappAlt": "Or contact via WhatsApp"
+    }
+  },
+  "favorites": {
+    "title": "My Favorites",
+    "subtitle": "Your saved yachts",
+    "empty": "No favorites yet",
+    "emptyDesc": "Start exploring and save yachts you love",
+    "explore": "Explore Yachts",
+    "shareList": "Share Favorites",
+    "clearAll": "Clear All",
+    "count": "{count} yacht | {count} yachts"
+  },
+  "compare": {
+    "title": "Compare Yachts",
+    "subtitle": "Side-by-side comparison",
+    "empty": "No yachts to compare",
+    "emptyDesc": "Add up to 3 yachts to compare",
+    "explore": "Explore Yachts",
+    "maxReached": "Maximum 3 yachts can be compared",
+    "remove": "Remove",
+    "clearAll": "Clear All",
+    "addAnother": "Add Another Yacht",
+    "specifications": "Specifications",
+    "features": "Features",
+    "pricing": "Pricing"
+  },
+  "search": {
+    "title": "Search Yachts",
+    "placeholder": "Search by name, brand, or description...",
+    "aiPlaceholder": "Describe your ideal yacht (e.g., '50ft yacht under 2M for family')",
+    "noResults": "No yachts found",
+    "suggestions": "Suggestions",
+    "recentSearches": "Recent Searches",
+    "popularSearches": "Popular Searches",
+    "aiPowered": "AI-Powered Search"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "phone": "Please enter a valid phone number",
+    "minLength": "Must be at least {min} characters",
+    "maxLength": "Must be no more than {max} characters",
+    "min": "Must be at least {min}",
+    "max": "Must be no more than {max}",
+    "pattern": "Invalid format"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "yachts": "Yachts",
+    "inquiries": "Inquiries",
+    "settings": "Settings",
+    "blog": "Blog",
+    "analytics": "Analytics",
+    "users": "Users",
+    "media": "Media",
+    "signOut": "Sign Out",
+    "welcome": "Welcome back",
+    "overview": "Overview",
+    "recentInquiries": "Recent Inquiries",
+    "quickActions": "Quick Actions",
+    "addYacht": "Add Yacht",
+    "viewAll": "View All",
+    "totalYachts": "Total Yachts",
+    "totalInquiries": "Total Inquiries",
+    "newThisWeek": "New This Week",
+    "pendingInquiries": "Pending",
+    "yachtForm": {
+      "create": "Create Yacht",
+      "edit": "Edit Yacht",
+      "basicInfo": "Basic Information",
+      "pricing": "Pricing",
+      "specifications": "Specifications",
+      "content": "Content",
+      "media": "Media",
+      "settings": "Settings",
+      "save": "Save Yacht",
+      "saving": "Saving...",
+      "saved": "Yacht saved successfully",
+      "error": "Failed to save yacht"
+    },
+    "inquiryStatus": {
+      "new": "New",
+      "contacted": "Contacted",
+      "qualified": "Qualified",
+      "closed": "Closed"
+    },
+    "bulkActions": {
+      "title": "Bulk Actions",
+      "publish": "Publish Selected",
+      "unpublish": "Unpublish Selected",
+      "delete": "Delete Selected",
+      "export": "Export Selected"
+    },
+    "filters": {
+      "all": "All",
+      "published": "Published",
+      "draft": "Draft",
+      "archived": "Archived"
+    }
+  },
+  "email": {
+    "inquiry": {
+      "subject": "New Inquiry: {yachtName}",
+      "greeting": "Hello {name},",
+      "received": "We have received your inquiry about {yachtName}.",
+      "response": "Our team will contact you within 24 hours.",
+      "signature": "Best regards,\nBimo Yacht Team"
+    },
+    "sellYacht": {
+      "subject": "Yacht Listing Request Received",
+      "greeting": "Dear {name},",
+      "received": "Thank you for submitting your yacht for listing.",
+      "review": "Our valuation team will review your submission and contact you shortly.",
+      "signature": "Best regards,\nBimo Yacht Team"
+    }
+  },
+  "whatsapp": {
+    "defaultMessage": "Hello! I'm interested in your yachts.",
+    "yachtInquiry": "Hello! I'm interested in {yachtName}. Please provide more information.",
+    "charterInquiry": "Hello! I'd like to inquire about chartering {yachtName}.",
+    "sellInquiry": "Hello! I'd like to list my yacht for sale.",
+    "generalInquiry": "Hello! I have a question about your services."
+  },
+  "errors": {
+    "notFound": "Page Not Found",
+    "notFoundDesc": "The page you're looking for doesn't exist.",
+    "serverError": "Server Error",
+    "serverErrorDesc": "Something went wrong. Please try again later.",
+    "unauthorized": "Unauthorized",
+    "unauthorizedDesc": "You don't have permission to access this page.",
+    "offline": "You're Offline",
+    "offlineDesc": "Please check your internet connection."
+  },
+  "footer": {
+    "description": "Dubai's premier luxury yacht brokerage. We specialize in yacht sales, charter, and owner listings with unmatched expertise and service.",
+    "dedLicensed": "DED Licensed",
+    "uaeBased": "UAE Based",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "services": {
+      "sales": "Yacht Sales",
+      "charter": "Yacht Charter",
+      "sell": "Sell Your Yacht",
+      "management": "Yacht Management",
+      "consultation": "Yacht Consultation"
+    },
+    "contactUs": "Contact Us",
+    "whatsappUs": "WhatsApp Us",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "whatsappMessage": "Hello! I have a question about Bimo Yacht."
+  },
+  "meta": {
+    "home": {
+      "title": "Luxury Yachts for Sale & Charter in Dubai",
+      "description": "Dubai's premier yacht brokerage. Browse exclusive yachts for sale and charter. 900K+ Instagram followers. DED Licensed."
+    },
+    "yachts": {
+      "title": "Yachts for Sale in Dubai",
+      "description": "Explore our collection of luxury yachts for sale. From elegant cruisers to superyachts."
+    },
+    "charter": {
+      "title": "Yacht Charter Dubai",
+      "description": "Charter a luxury yacht in Dubai. Professional crew, stunning routes, unforgettable experiences."
+    },
+    "sell": {
+      "title": "Sell Your Yacht in Dubai",
+      "description": "List your yacht with Dubai's most trusted brokerage. Expert valuations, global reach, premium service."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn about Bimo Yacht - Dubai's premier luxury yacht brokerage."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with our yacht experts. Available 7 days a week."
+    }
+  }
+}

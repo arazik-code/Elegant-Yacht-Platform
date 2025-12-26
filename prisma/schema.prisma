@@ -1,0 +1,455 @@
+// Prisma Schema for Bimo Yacht Platform
+// MongoDB Atlas Configuration
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// ===========================================
+// ENUMS
+// ===========================================
+
+enum YachtType {
+  SALE
+  CHARTER
+}
+
+enum YachtStatus {
+  AVAILABLE
+  SOLD
+  CHARTERED
+  UNAVAILABLE
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+}
+
+enum InquirySource {
+  WEBSITE
+  INSTAGRAM
+  WHATSAPP
+  REFERRAL
+}
+
+enum InquiryStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  CLOSED
+}
+
+enum InquiryOutcome {
+  WON
+  LOST
+  IN_PROGRESS
+}
+
+enum AdminRole {
+  SUPER_ADMIN
+  ADMIN
+  EDITOR
+}
+
+// ===========================================
+// MODELS
+// ===========================================
+
+model Yacht {
+  id              String      @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // Basic Info
+  title           String
+  slug            String      @unique
+  type            YachtType
+  status          YachtStatus @default(AVAILABLE)
+  
+  // Pricing
+  price           Float?
+  priceOnRequest  Boolean     @default(false)
+  currency        String      @default("AED")
+  charterPricePerWeek Float?
+  charterPricePerSeasonWinter Float?
+  charterPricePerSeasonSummer Float?
+  
+  // Specifications
+  lengthFeet      Int?
+  lengthMeters    Float?
+  beam            Float?
+  draft           Float?
+  brand           String?
+  model           String?
+  year            Int?
+  builder         String?
+  
+  // Capacity
+  cabins          Int?
+  bathrooms       Int?
+  guestCapacity   Int?
+  crewCapacity    Int?
+  
+  // Technical
+  engines         String?
+  engineMake      String?
+  engineModel     String?
+  engineHours     String?
+  engineType      String?
+  driveType       String?
+  fuelType        String?
+  maxSpeed        Int?
+  cruiseSpeed     Int?
+  fuelCapacity    Int?
+  range           Int?
+  
+  // Content
+  descriptionEn   String?
+  descriptionAr   String?
+  highlightsEn    String[]    @default([])
+  highlightsAr    String[]    @default([])
+  amenitiesEn     String[]    @default([])
+  amenitiesAr     String[]    @default([])
+  
+  // Charter Specific
+  charterRoutes   String[]    @default([])
+  // Display Options
+  featured        Boolean     @default(false)
+  showPrice       Boolean     @default(true)
+  priority        Int         @default(0)
+  
+  // Metadata
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  publishedAt     DateTime?
+  
+  // Relations
+  media           YachtMedia[]
+  inquiries       Inquiry[]
+}
+
+model YachtMedia {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  
+  yachtId   String    @db.ObjectId
+  yacht     Yacht     @relation(fields: [yachtId], references: [id], onDelete: Cascade)
+  
+  url       String
+  publicId  String?   // Cloudinary public ID
+  type      MediaType
+  order     Int       @default(0)
+  alt       String?
+  caption   String?
+  isCover   Boolean   @default(false)
+  
+  // Video specific
+  thumbnailUrl String?
+  duration     Int?    // in seconds
+  
+  createdAt DateTime  @default(now())
+}
+
+model Inquiry {
+  id        String        @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // Contact Info
+  name      String
+  phone     String
+  email     String?
+  
+  // Inquiry Details
+  message   String?
+  source    InquirySource @default(WEBSITE)
+  status    InquiryStatus @default(NEW)
+  
+  // User Context (Favorites, Compare List, etc.)
+  context   Json?
+  
+  // Related Yacht (optional)
+  yachtId   String?       @db.ObjectId
+  yacht     Yacht?        @relation(fields: [yachtId], references: [id], onDelete: SetNull)
+  
+  // Tracking
+  referrer  String?
+  userAgent String?
+  ipAddress String?
+  
+  // Admin notes & Sales Memory
+  notes         String?
+  assignedTo    String?
+  followUpDate  DateTime?
+  statusHistory Json?          // Array of status changes with timestamps
+  
+  // Deal Closure Tracking
+  outcome       InquiryOutcome?
+  outcomeDate   DateTime?
+  soldYachtId   String?        @db.ObjectId  // If WON, which yacht was sold
+  dealValue     Float?         // Approximate deal value
+  outcomeNotes  String?
+  
+  // WhatsApp tracking
+  whatsappClicks WhatsAppClick[]
+  
+  // Timestamps
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  contactedAt DateTime?
+}
+
+model Admin {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId   String    @unique
+  email     String    @unique
+  name      String?
+  avatar    String?
+  role      AdminRole @default(ADMIN)
+  
+  isActive  Boolean   @default(true)
+  
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  lastLoginAt DateTime?
+}
+
+model SiteSettings {
+  id          String  @id @map("_id")
+  
+  // General
+  siteName            String @default("Bimo Yacht For Sale")
+  siteTagline         String @default("Luxury Yachts in Dubai")
+  footerText          String @default("© 2024 Bimo Yacht For Sale. DED Licensed. All rights reserved.")
+
+  // WhatsApp
+  whatsappNumber      String @default("")
+  whatsappMessage     String @default("")
+  
+  // Contact
+  email               String @default("")
+  phone               String @default("")
+  address             String @default("")
+  googleMapsEmbed     String @default("")
+  
+  // Social
+  instagramUrl        String @default("")
+  instagramFollowers  String @default("900K+")
+  youtubeUrl          String @default("")
+  tiktokUrl           String @default("")
+  
+  // Business
+  dedLicenseNumber    String @default("")
+  
+  // Display Options
+  showPrices          Boolean @default(true)
+  maintenanceMode     Boolean @default(false)
+  
+  // Email Notifications
+  adminEmailAddress   String  @default("")
+  emailNotifyInquiry  Boolean @default(true)
+  emailNotifyListing  Boolean @default(true)
+  emailDailyDigest    Boolean @default(false)
+  emailWeeklyDigest   Boolean @default(false)
+  emailFooterContent  String  @default("© Bimo Yacht - Premium Yacht Brokerage in Dubai")
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ===========================================
+// AUDIT & ANALYTICS
+// ===========================================
+
+model AuditLog {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // Who
+  adminId     String?  @db.ObjectId
+  adminEmail  String?
+  adminName   String?
+  clerkId     String?
+  
+  // What
+  action      String   // CREATE, UPDATE, DELETE, PUBLISH, ARCHIVE, LOGIN, etc.
+  entityType  String   // Yacht, Inquiry, Admin, SiteSettings
+  entityId    String?
+  entityName  String?
+  
+  // Details
+  changes     Json?    // Before/after values
+  metadata    Json?    // Additional context
+  ipAddress   String?
+  userAgent   String?
+  
+  // When
+  createdAt   DateTime @default(now())
+  
+  @@index([adminId])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+}
+
+model AnalyticsEvent {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // Event Info
+  eventType String   // page_view, yacht_view, inquiry, whatsapp_click, etc.
+  eventData Json?
+  
+  // User Info (anonymous)
+  sessionId String?
+  userId    String?
+  
+  // Context
+  page      String?
+  referrer  String?
+  userAgent String?
+  ipAddress String?
+  country   String?
+  city      String?
+  
+  // Related entities
+  yachtId   String?  @db.ObjectId
+  inquiryId String?  @db.ObjectId
+  
+  createdAt DateTime @default(now())
+  
+  @@index([eventType])
+  @@index([yachtId])
+  @@index([createdAt])
+}
+
+// WhatsApp Click Tracking
+model WhatsAppClick {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // Context
+  context   String   // yacht_inquiry, charter_inquiry, sell_yacht, general_inquiry, admin_reply
+  locale    String   @default("en")
+  
+  // Related entities
+  inquiryId String?  @db.ObjectId
+  inquiry   Inquiry? @relation(fields: [inquiryId], references: [id], onDelete: SetNull)
+  yachtId   String?  @db.ObjectId
+  
+  // Yacht info (denormalized for analytics)
+  yachtTitle String?
+  
+  // Template used
+  templateId String? // For admin quick replies
+  customMessage String?
+  
+  // Tracking
+  userAgent String?
+  referrer  String?
+  ipAddress String?
+  
+  // Who initiated (for admin replies)
+  adminId   String?
+  
+  createdAt DateTime @default(now())
+  
+  @@index([inquiryId])
+  @@index([yachtId])
+  @@index([context])
+  @@index([createdAt])
+}
+
+// ===========================================
+// BLOG & CONTENT
+// ===========================================
+
+model BlogPost {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // Content
+  slug        String   @unique
+  titleEn     String
+  titleAr     String?
+  excerptEn   String?
+  excerptAr   String?
+  contentEn   String
+  contentAr   String?
+  
+  // Media
+  coverImage  String?
+  coverImageAlt String?
+  media       BlogMedia[] // Post-specific media uploads
+  
+  // Meta
+  metaTitleEn     String?
+  metaTitleAr     String?
+  metaDescriptionEn String?
+  metaDescriptionAr String?
+  
+  // Categorization
+  category    String?  // news, guides, lifestyle, yachts
+  tags        String[] @default([])
+  sources     String[] @default([]) // Reference links
+  
+  // Author
+  authorId    String?  @db.ObjectId
+  authorName  String?
+  
+  // Status
+  status      String   @default("draft") // draft, published, archived
+  featured    Boolean  @default(false)
+  
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  publishedAt DateTime?
+  
+  @@index([status])
+  @@index([category])
+  @@index([publishedAt])
+}
+
+model BlogMedia {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  
+  postId    String   @db.ObjectId
+  post      BlogPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  
+  url       String
+  publicId  String?
+  type      MediaType @default(IMAGE)
+  alt       String?
+  caption   String?
+  
+  createdAt DateTime @default(now())
+  
+  @@index([postId])
+}
+
+// ===========================================
+// SCHEDULED TASKS
+// ===========================================
+
+model ScheduledTask {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  
+  // Task Info
+  taskType    String   // publish_yacht, send_digest, archive_inquiry
+  entityType  String?
+  entityId    String?
+  
+  // Schedule
+  scheduledFor DateTime
+  executedAt   DateTime?
+  
+  // Status
+  status      String   @default("pending") // pending, completed, failed, cancelled
+  error       String?
+  
+  // Metadata
+  createdBy   String?
+  metadata    Json?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([status, scheduledFor])
+}

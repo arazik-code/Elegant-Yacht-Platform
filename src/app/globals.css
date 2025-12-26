@@ -1,0 +1,431 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================
+   BIMO YACHT - Global Luxury Styles
+   =========================================== */
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-jet: 11, 11, 11;
+    --color-navy: 14, 26, 43;
+    --color-gold: 201, 162, 77;
+    --color-white: 255, 255, 255;
+    
+    /* Semantic Colors - Light Mode (Default) */
+    --background: #FFFFFF;
+    --foreground: #0B0B0B;
+    
+    --card: #F9FAFB;
+    --card-foreground: #0B0B0B;
+ 
+    --popover: #FFFFFF;
+    --popover-foreground: #0B0B0B;
+ 
+    --primary: #0E1A2B; /* Navy */
+    --primary-foreground: #FFFFFF;
+ 
+    --secondary: #F3F4F6;
+    --secondary-foreground: #0E1A2B;
+ 
+    --muted: #F3F4F6;
+    --muted-foreground: #6B7280;
+ 
+    --accent: #F3F4F6;
+    --accent-foreground: #0E1A2B;
+    
+    --border: #E5E7EB;
+    --input: #E5E7EB;
+    --ring: #C9A24D;
+
+    --radius: 0rem;
+    
+    /* Animation speeds */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+  }
+ 
+  .dark {
+    /* Semantic Colors - Dark Mode */
+    --background: #0B0B0B;
+    --foreground: #FFFFFF;
+ 
+    --card: #1A1A1A;
+    --card-foreground: #FFFFFF;
+ 
+    --popover: #0B0B0B;
+    --popover-foreground: #FFFFFF;
+ 
+    --primary: #C9A24D; /* Gold */
+    --primary-foreground: #0B0B0B;
+ 
+    --secondary: #1A1A1A;
+    --secondary-foreground: #FFFFFF;
+ 
+    --muted: #1A1A1A;
+    --muted-foreground: #A1A1AA;
+ 
+    --accent: #1A1A1A;
+    --accent-foreground: #FFFFFF;
+    
+    --border: #27272A;
+    --input: #27272A;
+    --ring: #C9A24D;
+  }
+  
+  /* Base HTML */
+  html {
+    @apply antialiased scroll-smooth;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+  
+  body {
+    @apply bg-jet text-white min-h-screen;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+  
+  /* RTL Support - Font Family */
+  html[dir='rtl'] body {
+    font-family: var(--font-ibm-plex-arabic), var(--font-tajawal), system-ui, sans-serif;
+  }
+  
+  /* RTL Support - Comprehensive Layout Adjustments */
+  html[dir='rtl'] {
+    /* Default text alignment for RTL */
+    text-align: right;
+    
+    /* Scrollbar on left side for RTL */
+    direction: rtl;
+  }
+  
+  /* RTL - Flex direction overrides for common patterns */
+  html[dir='rtl'] .flex-row-rtl-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* RTL - Icon mirroring for directional icons (arrows, chevrons) */
+  html[dir='rtl'] .icon-flip-rtl {
+    transform: scaleX(-1);
+  }
+  
+  /* RTL - Input and form alignment */
+  html[dir='rtl'] input,
+  html[dir='rtl'] textarea,
+  html[dir='rtl'] select {
+    text-align: right;
+  }
+  
+  /* RTL - List markers */
+  html[dir='rtl'] ul,
+  html[dir='rtl'] ol {
+    padding-right: 1.5rem;
+    padding-left: 0;
+  }
+  
+  /* RTL - Placeholder text */
+  html[dir='rtl'] ::placeholder {
+    text-align: right;
+  }
+  
+  /* RTL - Dialog and modal positioning */
+  html[dir='rtl'] [role="dialog"] {
+    text-align: right;
+  }
+  
+  /* RTL - Table alignment */
+  html[dir='rtl'] th,
+  html[dir='rtl'] td {
+    text-align: right;
+  }
+  
+  /* RTL - Swiper/carousel adjustments */
+  html[dir='rtl'] .swiper {
+    direction: rtl;
+  }
+  
+  html[dir='rtl'] .swiper-slide {
+    direction: ltr;
+  }
+  
+  /* Selection */
+  ::selection {
+    @apply bg-gold/30 text-white;
+  }
+  
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-jet;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold/50;
+  }
+  
+  /* Focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-jet;
+  }
+}
+
+@layer components {
+  /* ===========================================
+     LUXURY BUTTON STYLES
+     =========================================== */
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-4
+           bg-gold text-jet font-semibold
+           rounded-none
+           transition-all duration-300
+           hover:bg-gold-300 hover:shadow-gold
+           active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-4
+           bg-transparent text-white font-semibold
+           border border-white/30
+           rounded-none
+           transition-all duration-300
+           hover:border-gold hover:text-gold hover:bg-white/5
+           active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           px-6 py-3
+           bg-transparent text-white/70 font-medium
+           transition-all duration-300
+           hover:text-gold
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2
+           px-8 py-4
+           bg-[#25D366] text-white font-semibold
+           rounded-none
+           transition-all duration-300
+           hover:bg-[#20BD5A] hover:shadow-lg
+           active:scale-[0.98];
+  }
+  
+  /* ===========================================
+     LUXURY CARD STYLES
+     =========================================== */
+  
+  .card-luxury {
+    @apply relative overflow-hidden
+           bg-gradient-to-br from-jet-400 to-navy
+           border border-white/5
+           transition-all duration-500;
+  }
+  
+  .card-luxury:hover {
+    @apply border-gold/30 shadow-luxury;
+  }
+  
+  .card-luxury::before {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500;
+    content: '';
+    background: linear-gradient(135deg, transparent 0%, rgba(201, 162, 77, 0.05) 100%);
+  }
+  
+  .card-luxury:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* ===========================================
+     TYPOGRAPHY
+     =========================================== */
+  
+  .heading-display {
+    @apply font-display font-bold tracking-tight;
+  }
+  
+  .heading-section {
+    @apply font-display text-display-sm md:text-display-md font-bold tracking-tight;
+  }
+  
+  .text-luxury {
+    @apply text-body-lg text-white/70 leading-relaxed;
+  }
+  
+  .text-gold-gradient {
+    @apply bg-gradient-gold bg-clip-text text-transparent;
+  }
+  
+  /* ===========================================
+     FORM STYLES
+     =========================================== */
+  
+  .input-luxury {
+    @apply w-full px-6 py-4
+           bg-white/5 border border-white/10
+           text-white placeholder:text-white/40
+           rounded-none
+           transition-all duration-300
+           focus:border-gold focus:bg-white/10 focus:outline-none;
+  }
+  
+  .label-luxury {
+    @apply block text-sm font-medium text-white/70 mb-2;
+  }
+  
+  /* ===========================================
+     LAYOUT UTILITIES
+     =========================================== */
+  
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+  
+  /* ===========================================
+     OVERLAY & EFFECTS
+     =========================================== */
+  
+  .overlay-dark {
+    @apply absolute inset-0 bg-gradient-to-b from-jet/60 via-jet/40 to-jet;
+  }
+  
+  .overlay-radial {
+    @apply absolute inset-0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(11, 11, 11, 0.8) 100%);
+  }
+  
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .shine-effect {
+    @apply relative overflow-hidden;
+  }
+  
+  .shine-effect::after {
+    @apply absolute inset-0 -translate-x-full transition-transform duration-700;
+    content: '';
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  }
+  
+  .shine-effect:hover::after {
+    @apply translate-x-full;
+  }
+  
+  /* ===========================================
+     BADGE STYLES
+     =========================================== */
+  
+  .badge-gold {
+    @apply inline-flex items-center gap-1.5
+           px-3 py-1
+           bg-gold/10 text-gold text-sm font-medium
+           border border-gold/30;
+  }
+  
+  .badge-status {
+    @apply inline-flex items-center gap-1.5
+           px-2 py-0.5
+           text-xs font-semibold uppercase tracking-wider;
+  }
+  
+  /* ===========================================
+     ANIMATIONS
+     =========================================== */
+  
+  .animate-in {
+    animation: animateIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes animateIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .stagger-1 { animation-delay: 100ms; }
+  .stagger-2 { animation-delay: 200ms; }
+  .stagger-3 { animation-delay: 300ms; }
+  .stagger-4 { animation-delay: 400ms; }
+  .stagger-5 { animation-delay: 500ms; }
+  
+  /* ===========================================
+     SWIPER CUSTOM STYLES
+     =========================================== */
+  
+  .swiper-pagination-bullet {
+    @apply w-2 h-2 bg-white/30 opacity-100 transition-all duration-300;
+  }
+  
+  .swiper-pagination-bullet-active {
+    @apply w-8 bg-gold rounded-full;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-gold !important;
+  }
+  
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    @apply text-lg font-bold;
+  }
+}
+
+@layer utilities {
+  /* Luxury-specific utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .aspect-yacht {
+    aspect-ratio: 16 / 10;
+  }
+  
+  .aspect-gallery {
+    aspect-ratio: 4 / 3;
+  }
+  
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Gradient border */
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--tw-gradient-stops)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+}
