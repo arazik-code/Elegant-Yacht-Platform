@@ -100,8 +100,8 @@ export function InstagramSection() {
                 '/images/service-sales.jpg',
                 '/images/service-charter.jpg',
                 '/images/service-sell.jpg',
-                '/images/insta-1.jpg', // Reusing for grid effect
-                '/images/insta-2.jpg',
+                '/images/home-cta-bg.jpg',
+                '/images/contact-hero.jpg',
               ].map((img, i) => (
                 <motion.a
                   key={i}
