@@ -118,7 +118,7 @@ Sent via bimoyacht.com contact form`
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/Contact page.jpg"
+            src="/images/contact-hero.jpg"
             alt="Contact Bimo Yacht"
             fill
             className="object-cover"
