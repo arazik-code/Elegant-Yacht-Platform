@@ -33,6 +33,6 @@ yarn-error.log*
 .vercel
 
 # Media
-*.mp4
+
 *.mov
 *.avi
