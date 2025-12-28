@@ -18,14 +18,7 @@ dist
 .vscode
 .idea
 
-# Large Media (should be in Cloudinary)
-*.mp4
-*.mov
-*.avi
-*.wmv
-*.mkv
-public/videos
-public/images/large
+
 
 # Logs and Backups
 *.log
