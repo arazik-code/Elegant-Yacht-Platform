@@ -117,15 +117,13 @@ Sent via bimoyacht.com contact form`
       {/* Hero */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="/videos/yackht%204k.mp4" type="video/mp4" />
-          </video>
+          <Image
+            src="/images/Contact page.jpg"
+            alt="Contact Bimo Yacht"
+            fill
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/50" />
         </div>
 

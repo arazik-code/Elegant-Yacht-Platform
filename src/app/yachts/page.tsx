@@ -53,7 +53,7 @@ export default async function YachtsPage({ searchParams }: YachtsPageProps) {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/yackhts%20selling%20page.mp4" type="video/mp4" />
+            <source src="/videos/yacht-sell.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         </div>

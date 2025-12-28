@@ -19,7 +19,7 @@ export function CTASection() {
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url(/images/Somnio%20to%20Offer%20Luxury%20Apartments%20at%20Sea.jfif)' }}
+          style={{ backgroundImage: "url('/images/Home page last section background.jpg')" }}
         />
         <div className="absolute inset-0 bg-background/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />

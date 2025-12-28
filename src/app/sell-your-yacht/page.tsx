@@ -159,7 +159,7 @@ Submitted via bimoyacht.com`
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={siteConfig.heroVideo} type="video/mp4" />
+            <source src="/videos/yacht-sell.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-jet via-jet/90 to-jet/70" />
         </div>
