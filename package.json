@@ -18,6 +18,11 @@
   "engines": {
     "node": ">=18.17.0"
   },
+  "overrides": {
+    "next-cloudinary": {
+      "next": "$next"
+    }
+  },
   "dependencies": {
     "@clerk/nextjs": "^6.36.4",
     "@dnd-kit/core": "^6.3.1",
