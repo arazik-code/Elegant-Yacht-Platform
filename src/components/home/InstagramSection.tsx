@@ -93,15 +93,15 @@ export function InstagramSection() {
           >
             <div className="grid grid-cols-3 gap-3">
               {[
-                '/images/luxury%20yackht.jfif',
-                '/images/luxury%20yackht%202.jfif',
-                '/images/luxury%20yackht%203.jfif',
-                '/images/luxury%20yackht%204.jfif',
-                '/images/luxury%20yackht%205.jfif',
-                '/images/luxury%20yackht%206.jfif',
-                '/images/luxury%20yackht%207.jfif',
-                '/images/Somnio%20to%20Offer%20Luxury%20Apartments%20at%20Sea.jfif',
-                '/images/luxury%20yackht.jfif',
+                '/images/insta-1.jpg',
+                '/images/insta-2.jpg',
+                '/images/insta-3.jpg',
+                '/images/insta-4.jpg',
+                '/images/service-sales.jpg',
+                '/images/service-charter.jpg',
+                '/images/service-sell.jpg',
+                '/images/insta-1.jpg', // Reusing for grid effect
+                '/images/insta-2.jpg',
               ].map((img, i) => (
                 <motion.a
                   key={i}

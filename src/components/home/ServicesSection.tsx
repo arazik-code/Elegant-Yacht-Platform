@@ -17,21 +17,21 @@ export function ServicesSection() {
       title: t('sales.title'),
       description: t('sales.description'),
       href: '/yachts?type=SALE',
-      image: '/images/luxury%20yackht%202.jfif',
+      image: '/images/service-sales.jpg',
     },
     {
       icon: Calendar,
       title: t('charter.title'),
       description: t('charter.description'),
       href: '/charter',
-      image: '/images/luxury%20yackht%203.jfif',
+      image: '/images/service-charter.jpg',
     },
     {
       icon: Ship,
       title: t('sell.title'),
       description: t('sell.description'),
       href: '/sell-your-yacht',
-      image: '/images/luxury%20yackht%204.jfif',
+      image: '/images/service-sell.jpg',
     },
   ]
 
