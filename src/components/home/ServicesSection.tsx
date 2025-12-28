@@ -31,7 +31,7 @@ export function ServicesSection() {
       title: t('sell.title'),
       description: t('sell.description'),
       href: '/sell-your-yacht',
-      image: '/images/service-sell.jpg',
+      image: '/images/insta-1.jpg',
     },
   ]
 
