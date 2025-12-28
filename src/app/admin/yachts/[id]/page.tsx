@@ -69,14 +69,9 @@ async function getYacht(id: string) {
       range: yacht.range || 0,
       currency: yacht.currency,
       price: yacht.price ? Number(yacht.price) : 0,
-      charterPricePerHour: yacht.charterPricePerHour ? Number(yacht.charterPricePerHour) : 0,
-      charterPricePerDay: yacht.charterPricePerDay ? Number(yacht.charterPricePerDay) : 0,
-      descriptionEn: yacht.descriptionEn || '',
-      descriptionAr: yacht.descriptionAr || '',
       highlightsEn: yacht.highlightsEn || [],
       highlightsAr: yacht.highlightsAr || [],
       charterRoutes: yacht.charterRoutes || [],
-      minimumHours: yacht.minimumHours || 4,
       priority: yacht.priority,
     }
 

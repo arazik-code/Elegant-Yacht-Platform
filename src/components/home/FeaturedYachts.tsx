@@ -117,8 +117,6 @@ export async function FeaturedYachts() {
                 type: yacht.type,
                 price: yacht.price ? Number(yacht.price) : null,
                 priceOnRequest: yacht.priceOnRequest,
-                charterPricePerHour: yacht.charterPricePerHour ? Number(yacht.charterPricePerHour) : null,
-                charterPricePerDay: yacht.charterPricePerDay ? Number(yacht.charterPricePerDay) : null,
                 currency: yacht.currency,
                 lengthFeet: yacht.lengthFeet,
                 brand: yacht.brand,
