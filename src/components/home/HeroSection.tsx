@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/Button'
 import { AISearch } from '@/components/search/AISearch'
 import { useLocaleInfo } from '@/components/providers/LocaleProvider'
 import { getWhatsAppLink, getWhatsAppNumber } from '@/lib/utils'
+import { siteConfig } from '@/lib/constants'
 
 export function HeroSection() {
   const t = useTranslations('hero')
@@ -59,7 +60,7 @@ export function HeroSection() {
           onLoadedData={() => setIsVideoLoaded(true)}
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/hero-yacht.mp4" type="video/mp4" />
+          <source src={siteConfig.heroVideo} type="video/mp4" />
         </video>
 
         {/* Overlay */}

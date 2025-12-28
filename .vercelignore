@@ -1,0 +1,41 @@
+# Vercel Ignore File
+# These files will NOT be uploaded to Vercel
+
+# Dependencies and Build Outputs
+node_modules
+.next
+out
+build
+dist
+
+# Environment Variables
+.env
+.env.*
+
+# Version Control
+.git
+.github
+.vscode
+.idea
+
+# Large Media (should be in Cloudinary)
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.mkv
+public/videos
+public/images/large
+
+# Logs and Backups
+*.log
+*.bak
+*.tmp
+tsc_errors.txt
+errors.log
+errors2.log
+
+# Documentation & Reports
+*.md
+PROJECT_REPORT.md
+IMPLEMENTATION_REPORT.md

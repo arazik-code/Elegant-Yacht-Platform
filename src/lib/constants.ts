@@ -5,6 +5,7 @@ export const siteConfig = {
   description: 'Luxury Yachts for Sale & Charter in Dubai. UAE\'s premier yacht brokerage with 900K+ Instagram followers. DED Licensed.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://bimoyacht.com',
   ogImage: '/og-image.jpg',
+  heroVideo: '/videos/hero-yacht.mp4', // Replace with your Cloudinary URL, e.g., https://res.cloudinary.com/...
 
   // Contact
   email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'info@bimoyacht.com',
